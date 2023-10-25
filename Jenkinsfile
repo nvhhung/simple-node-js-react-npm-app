@@ -4,15 +4,15 @@ pipeline {
             image 'node:18.18.2-alpine3.18' 
             args '-p 3000:3000' 
         }
-        environment {
-            CREDENTIAL_JENKINS = credentials('api-key-aws')
-        }
+    }
+    environment {
+        CREDENTIAL_JENKINS = credentials('api-key-aws')
     }
     stages {
         stage('Build') { 
             steps {
-                sh echo 'Stage Build is working'
-                sh echo 'Test Credential Plugin is $CREDENTIAL_JENKINS'
+                sh 'echo Stage Build is working'
+                sh 'echo Test Credential Plugin is $CREDENTIAL_JENKINS'
                 sh 'npm install' 
             }
         }
