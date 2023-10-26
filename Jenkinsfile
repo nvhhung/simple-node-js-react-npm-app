@@ -12,7 +12,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'echo Stage Build is working'
-                sh 'echo Test Credential Plugin is $CREDENTIAL_JENKINS'
+                sh 'echo Test Credential Plugin is $CREDENTIAL_JENKINS all is ****'
                 sh 'npm install' 
             }
         }
